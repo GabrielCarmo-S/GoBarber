@@ -10,7 +10,6 @@ class AppointmentsRepository extends Repository<Appointment> {
     });
 
     return findAppointment || null;
-
   }
 
 }

@@ -1,4 +1,5 @@
-import express, { request, response } from 'express';
+import express from 'express';
+import 'reflect-metadata';
 import routes from './routes';
 import './database';
 
