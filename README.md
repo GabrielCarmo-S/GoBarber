@@ -1,15 +1,3 @@
-<div align="center">
-    <img alt="GoBarber" title="#delicinha" src=".github/gostack.png" width="250px" />
-</div>
-<h1 align="center">
-    <img alt="GoBarber" title="#delicinha" src=".github/gobarber.png" width="250px" />
-    
-</h1>
-
-<h4 align="center">
-  🚀 Desafio GoBarber 11.0
-</h4>
-
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
