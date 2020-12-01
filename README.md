@@ -22,8 +22,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## :notebook: Executando
 
-Dentro do **README** de cada subpasta do projeto é detalhado como executar as aplicações separadamente.
-
 ```bash
 # Clone este repositório
 # Acesse a pasta do projeto no seu terminal/cmd
