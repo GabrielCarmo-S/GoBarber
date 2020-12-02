@@ -1,8 +1,8 @@
 <div align="center">
-    <img alt="GoBarber" src=".github/gostack.png" width="250px" />
+    <img alt="GoBarber" src="./github/gostack.png" width="250px" />
 </div>
 <h1 align="center">
-    <img alt="GoBarber" src=".github/gobarber.png" width="250px" />
+    <img alt="GoBarber" src="./github/gobarber.png" width="250px" />
     
 </h1>
 
