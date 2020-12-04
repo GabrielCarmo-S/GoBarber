@@ -20,7 +20,7 @@
 
 ## 💻 Projeto
 
-Esse projeto foi desenvolvido durante o Bootcamp da Rocketseat. Trata-se de um projeto fullstack para uma barbearia ficticia, a GoBarber, o projeto consiste na parte frontend(React), mobile(React Native) e backend(NodeJs).
+Esse projeto foi desenvolvido para trata-se de um projeto fullstack para uma barbearia ficticia, a GoBarber, o projeto consiste na parte frontend(React), mobile(React Native) e backend(NodeJs).
 
 ## :rocket: Tecnologias
 
