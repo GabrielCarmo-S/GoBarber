@@ -34,8 +34,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## :notebook: Executando
 
-Dentro do **README** de cada subpasta do projeto é detalhado como executar as aplicações separadamente.
-
 ```bash
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd rocketseat-gobarber/backend
