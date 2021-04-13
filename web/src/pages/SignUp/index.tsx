@@ -7,9 +7,10 @@ import logoImg from '../../assets/logo.svg';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 
-import { Container, Content, Background } from './styles';
+import { Container, Content, Background, AnimationContainer } from './styles';
 import { FormHandles } from '@unform/core';
 import getValidationErrors from '../../utils/getValidationErrors';
+import { Link } from 'react-router-dom';
 
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
@@ -42,29 +43,36 @@ const SignUp: React.FC = () => {
     <Container>
       <Background />
       <Content>
-        <img src={logoImg} alt="GoBarber" />
+        <AnimationContainer>
+          <img src={logoImg} alt="GoBarber" />
 
-        <Form ref={formRef} onSubmit={handleSubmit}>
-          <h1>Faça seu cadastro</h1>
+          <Form ref={formRef} onSubmit={handleSubmit}>
+            <h1>Faça seu cadastro</h1>
 
-          <Input name="name" placeholder="Nome" icon={FiUser} type="text" />
+            <Input name="name" placeholder="Nome" icon={FiUser} type="text" />
 
-          <Input name="email" placeholder="E-mail" icon={FiMail} type="text" />
+            <Input
+              name="email"
+              placeholder="E-mail"
+              icon={FiMail}
+              type="text"
+            />
 
-          <Input
-            name="password"
-            placeholder="Senha"
-            icon={FiLock}
-            type="password"
-          />
+            <Input
+              name="password"
+              placeholder="Senha"
+              icon={FiLock}
+              type="password"
+            />
 
-          <Button type="submit">Cadastrar</Button>
-        </Form>
+            <Button type="submit">Cadastrar</Button>
+          </Form>
 
-        <a href="ssss">
-          <FiArrowLeft />
-          Voltar para logon
-        </a>
+          <Link to="/">
+            <FiArrowLeft />
+            Voltar para logon
+          </Link>
+        </AnimationContainer>
       </Content>
     </Container>
   );
