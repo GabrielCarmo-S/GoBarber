@@ -1,5 +1,5 @@
+import { v4 as uuid } from 'uuid';
 import React, { createContext, useCallback, useContext, useState } from 'react';
-import { uuid } from 'uuidv4';
 import ToastContainer from '../components/ToastContainer';
 
 export interface ToastMessage {
@@ -29,8 +29,7 @@ export const ToastProvider: React.FC = ({ children }) => {
         title,
         description,
       };
-
-      setMessages(state => [...state, toast]);
+      setMessages(oldMessages => [...oldMessages, toast]);
     },
     []
   );
