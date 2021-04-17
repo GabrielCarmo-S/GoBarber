@@ -1,10 +1,21 @@
 import React, {useCallback, useRef} from 'react';
 import logoImg from '../../assets/logo.png';
-import {Image, KeyboardAvoidingView, Platform, TextInput} from 'react-native';
+import {
+  Alert,
+  Image,
+  KeyboardAvoidingView,
+  Platform,
+  TextInput,
+} from 'react-native';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
-
 import Icon from 'react-native-vector-icons/Feather';
+import {ScrollView} from 'react-native-gesture-handler';
+import {useNavigation} from '@react-navigation/core';
+import {Form} from '@unform/mobile';
+import {FormHandles} from '@unform/core';
+import * as Yup from 'yup';
+import getValidationErrors from '../../utils/getValidationErrors';
 
 import {
   Container,
@@ -14,17 +25,51 @@ import {
   CreateAccountButton,
   CreateAccountButtonText,
 } from './styles';
-import {ScrollView} from 'react-native-gesture-handler';
-import {useNavigation} from '@react-navigation/core';
-import {Form} from '@unform/mobile';
-import {FormHandles} from '@unform/core';
+
+interface SignInFormData {
+  email: string;
+  password: string;
+}
 
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const navigation = useNavigation();
   const passwordInputRef = useRef<TextInput>(null);
 
-  const handleSignIn = useCallback((data: object) => {}, []);
+  const handleSignIn = useCallback(async (data: SignInFormData) => {
+    try {
+      formRef.current?.setErrors({});
+
+      const schema = Yup.object().shape({
+        email: Yup.string()
+          .required('E-mail obrigatório')
+          .email('Digite um e-mail válido'),
+        password: Yup.string().required('Senha obrigatória'),
+      });
+
+      await schema.validate(data, {
+        abortEarly: false,
+      });
+
+      // await signIn({
+      //   email: data.email,
+      //   password: data.password,
+      // });
+
+      // history.push('/dashboard');
+    } catch (err) {
+      if (err instanceof Yup.ValidationError) {
+        const erros = getValidationErrors(err);
+
+        formRef.current?.setErrors(erros);
+      }
+
+      Alert.alert(
+        'Erro na autenticação',
+        'Ocorreu um erro ao fazer login, cheque as credenciais',
+      );
+    }
+  }, []);
 
   return (
     <>
