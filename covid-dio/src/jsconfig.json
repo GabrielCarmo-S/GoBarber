@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+      "target": "es2015",
+      "baseUrl": "src",
+      "jsx": "react",
+      "paths": {
+          "components:/*": [
+              "./components/*"
+          ],
+
+          "screens:/*": [
+              "./screens/*"
+          ],
+
+          "assets:/*": [
+              "./assets/*"
+          ],
+
+          "commons:/*": [
+              "./commons/*"
+          ]
+      } 
+  },
+  "exclude": [
+      "node_modules",
+      "build"
+  ]
+}
